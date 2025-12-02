@@ -94,9 +94,8 @@ function WorldCard({ title, role, description, accentColor, index }) {
           color: colors.textLight,
           margin: 0,
         }}
-      >
-        {description}
-      </p>
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
     </motion.div>
   );
 }
@@ -266,25 +265,25 @@ export default function App() {
     {
       title: "Tessitura Network",
       role: "Cloud Project Manager",
-      description: "Delivering cloud outcomes for arts & cultural organizations. Exploring AI-augmented strategic delivery and team leadership.",
+      description: "<em>My day job.</em> Delivering cloud outcomes for arts & cultural organizations. Exploring AI-augmented strategic delivery and team leadership.",
       accentColor: colors.olive,
     },
     {
       title: "Emmaus Collective",
       role: "Emmaus Technology • Emmaus Software",
-      description: "Discipleship programming, church technology services, and software for businesses and consumers. Building tools for Kingdom impact.",
+      description: "<em>My passion project.</em> Discipleship programming, church technology services, and software for businesses and consumers. Building tools for Kingdom impact.",
       accentColor: colors.sage,
     },
     {
       title: "Publisher & Editor",
       role: "Fiction • Nonfiction • Religious Literature",
-      description: "Crafting and curating stories that matter. From AI-assisted novel systems to theological deep dives, bringing ideas to print.",
+      description: "<em>Helping friends achieve their dreams.</em> Crafting and curating stories that matter. From AI-assisted novel systems to theological deep dives, bringing ideas to print.",
       accentColor: colors.terracotta,
     },
     {
       title: "Family Projects",
       role: "Husband & Dad",
-      description: "World travel adventures, 3D-printed creations, basement builds, and side ventures. Where craft meets chaos meets joy.",
+      description: "<em>An eye on what matters.</em> World travel adventures, 3D-printed creations, basement builds, and side ventures. Where craft meets chaos meets joy.",
       accentColor: "#7a6a5a",
     },
   ];
