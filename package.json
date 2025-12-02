@@ -1,0 +1,33 @@
+{
+  "name": "weston-muniak-landing",
+  "version": "1.0.0",
+  "description": "Personal landing page for Weston Muniak",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && npx gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.4"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.1.1",
+    "vite": "^5.0.0",
+    "gh-pages": "^6.1.0"
+  },
+  "keywords": [
+    "portfolio",
+    "landing-page",
+    "react",
+    "weston-muniak"
+  ],
+  "author": "Weston Muniak",
+  "license": "MIT",
+  "homepage": "https://westonmuniak.github.io/weston-muniak-landing"
+}
