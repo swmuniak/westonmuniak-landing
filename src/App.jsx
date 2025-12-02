@@ -33,6 +33,9 @@ function AnimatedSection({ children, className, style, delay = 0 }) {
 
 // World Card Component
 function WorldCard({ title, role, description, accentColor, index }) {
+  const { scrollYProgress } = useScroll();
+  const cardY = useTransform(scrollYProgress, [0, 1], [0, -20 + index * 5]);
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -49,6 +52,7 @@ function WorldCard({ title, role, description, accentColor, index }) {
         cursor: "default",
         overflow: "hidden",
         transition: "box-shadow 0.3s ease",
+        y: cardY,
       }}
     >
       <div
@@ -159,6 +163,9 @@ function BuildItem({ letter, title, description, index }) {
 
 // Skill Block Component
 function SkillBlock({ title, subtitle, description, index }) {
+  const { scrollYProgress } = useScroll();
+  const skillY = useTransform(scrollYProgress, [0, 1], [0, -10 + index * 3]);
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 25 }}
@@ -171,6 +178,7 @@ function SkillBlock({ title, subtitle, description, index }) {
         borderRadius: "1.25rem",
         boxShadow: "0 4px 24px rgba(74, 85, 72, 0.06)",
         borderLeft: `4px solid ${colors.sage}`,
+        y: skillY,
       }}
     >
       <h3
@@ -254,6 +262,8 @@ export default function App() {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll();
   const parallaxY = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
+  const parallaxYSlow = useTransform(scrollYProgress, [0, 1], [0, 50]);
+  const parallaxYFast = useTransform(scrollYProgress, [0, 0.3], [0, -30]);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
@@ -509,6 +519,7 @@ export default function App() {
             style={{
               position: "relative",
               flexShrink: 0,
+              y: parallaxYFast,
             }}
           >
             <div
@@ -569,6 +580,7 @@ export default function App() {
             style={{
               maxWidth: "520px",
               textAlign: "left",
+              y: parallaxYSlow,
             }}
           >
             <span
