@@ -397,7 +397,7 @@ export default function App() {
             letterSpacing: "-0.02em",
           }}
         >
-          WM
+          Weston Muniak
         </span>
         <a
           href="https://linkedin.com/in/muniak/"
@@ -453,11 +453,25 @@ export default function App() {
           <div
             style={{
               position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundImage: `url(${heroBackgroundImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              opacity: 0.015,
+              filter: "grayscale(100%) contrast(0.3) brightness(1.2)",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
               top: "10%",
               left: "15%",
               width: "500px",
               height: "500px",
-              background: `radial-gradient(circle, rgba(139, 157, 131, 0.1) 0%, transparent 70%)`,
+              background: `radial-gradient(circle, rgba(139, 157, 131, 0.05) 0%, transparent 70%)`,
               borderRadius: "50%",
             }}
           />
@@ -468,7 +482,7 @@ export default function App() {
               right: "10%",
               width: "400px",
               height: "400px",
-              background: `radial-gradient(circle, rgba(196, 149, 106, 0.08) 0%, transparent 70%)`,
+              background: `radial-gradient(circle, rgba(196, 149, 106, 0.04) 0%, transparent 70%)`,
               borderRadius: "50%",
             }}
           />
@@ -572,7 +586,7 @@ export default function App() {
                 borderRadius: "2rem",
               }}
             >
-              Northeast Ohio
+              Builder & Creator
             </span>
             <h1
               style={{
