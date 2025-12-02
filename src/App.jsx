@@ -284,27 +284,27 @@ export default function App() {
     {
       title: "Family Projects",
       role: "Husband & Dad",
-      description: "NYC adventures, 3D-printed creations, basement builds, and side ventures. Where craft meets chaos meets joy.",
+      description: "World travel adventures, 3D-printed creations, basement builds, and side ventures. Where craft meets chaos meets joy.",
       accentColor: "#7a6a5a",
     },
   ];
 
   const builds = [
     {
-      letter: "A",
+      letter: "•",
       title: "AI + Automation Systems",
       description: "AI agents, n8n workflows, Supabase-backed tools, and intelligent workflow engines that actually work.",
     },
     {
-      letter: "B",
-      title: "Creative Tech Projects",
-      description: "3D printing, digital art, Arduino experiments, and rapid MVP prototypes that push boundaries.",
-    },
-    {
-      letter: "C",
+      letter: "•",
       title: "Apps & SaaS",
       description: "Quick-to-market, useful, maintainable products designed for clean handoff and real-world impact.",
     },
+    {
+      letter: "•",
+      title: "Creative Tech Projects",
+      description: "Maker products, digital art, IoT experiments, and rapid MVP prototypes that push boundaries.",
+    }
   ];
 
   const skills = [
